@@ -1,0 +1,4 @@
+scrapy
+openai
+flask
+selenium

@@ -1,4 +1,4 @@
-// fetching problems and their descriptions 
+// fetching ONLY PROBLEMS
 import { LeetCode } from 'leetcode-query';
 import * as fs from 'fs';
 
@@ -24,6 +24,7 @@ async function getAllProblems() {
     let hasMore = true;
     let offset = 0;
     const limit = 100; // Adjust this if the API allows a higher limit
+    let count = 1
 
     try {
         while (hasMore) {
@@ -40,9 +41,10 @@ async function getAllProblems() {
             } else {
                 offset += limit;
             }
+            count ++;
         }
 
-        fs.writeFileSync('output.json', JSON.stringify(allProblems, null, 2));
+        fs.writeFileSync('output1.json', JSON.stringify(allProblems, null, 2));
     } catch (error) {
         console.error('Error fetching problems:', error);
     }

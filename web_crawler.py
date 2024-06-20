@@ -7,7 +7,7 @@ import json
 class WebCrawler:
 
     # create three variables: start_url, max_depth, list of visited urls
-    def __init__(self, start_url, max_depth=2, max_links=50, output_file='output.json'):
+    def __init__(self, start_url, max_depth=2, max_links=50, output_file='output_100_git.json'):
         self.start_url = start_url
         self.max_depth = max_depth # hoe many sublinks to follow 
         self.visited = set() # set object to avoid readding links that have been visited
@@ -94,7 +94,7 @@ class WebCrawler:
 
                 
 # Example usage
-crawler = WebCrawler('https://leetcode.com/problemset/', max_depth=2)
+crawler = WebCrawler('https://github.com/aman0046/TOP-100-DSA-Interview-Questions', max_depth=2)
 crawler.crawl()
 
 # how to make api calls 

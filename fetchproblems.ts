@@ -51,3 +51,5 @@ async function getAllProblems() {
 }
 
 getAllProblems();
+
+// node --no-deprecation -r ./node_modules/ts-node/register fetchproblems.ts > output.json
